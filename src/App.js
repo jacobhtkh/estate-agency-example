@@ -13,7 +13,7 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Suspense fallback={Spinner}>
+        <Suspense fallback={<Spinner />}>
           <Route exact path='/' component={LandingPage} />
         </Suspense>
       </Switch>

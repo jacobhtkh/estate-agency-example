@@ -6,6 +6,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
   position: sticky;
 `;
 
@@ -48,6 +49,8 @@ export const OptionLink = styled(Link)`
   padding: 10px 15px;
   position: relative;
   text-decoration: none;
+  font-family: 'avenir';
+  font-size: 18px;
   margin-right: 30px;
   top: 3px;
   cursor: pointer;
@@ -72,6 +75,8 @@ export const LoginLink = styled(Link)`
   padding: 10px 15px;
   position: relative;
   text-decoration: none;
+  font-family: 'avenir';
+  font-size: 16px;
   top: 3px;
   cursor: pointer;
   :visited {
