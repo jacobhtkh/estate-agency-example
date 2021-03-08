@@ -3,6 +3,7 @@ import {
   LandingPageContainer,
   LandingPageImageContainer,
   LandingPageImage,
+  LandingPageTitle,
 } from './landing-page.styles';
 
 const LandingPage = (props) => {
@@ -11,10 +12,11 @@ const LandingPage = (props) => {
       <LandingPageImageContainer>
         <LandingPageImage
           src={
-            'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60'
+            'https://images.unsplash.com/photo-1575386848021-028a496c03fe?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
           }
         />
       </LandingPageImageContainer>
+      <LandingPageTitle>Find Your Dream Home</LandingPageTitle>
     </LandingPageContainer>
   );
 };
