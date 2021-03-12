@@ -10,6 +10,7 @@ import {
   FiltersButton,
   SearchButton,
   Icon,
+  IconText,
 } from './property-search.styles';
 
 const PropertySearch = (props) => {
@@ -26,12 +27,12 @@ const PropertySearch = (props) => {
 
   return (
     <PropertySearchContainer>
-      <PropertyOptionsDropdown>
-        <option value='Buy'>Buy</option>
-        <option value='Buy'>Sell</option>
-        <option value='Buy'>Rent</option>
-      </PropertyOptionsDropdown>
       <PropertySearchForm onSubmit={handleSubmit}>
+        <PropertyOptionsDropdown>
+          <option value='Buy'>Buy</option>
+          <option value='Buy'>Sell</option>
+          <option value='Buy'>Rent</option>
+        </PropertyOptionsDropdown>
         <PropertySearchInput
           name='property-search'
           type='text'
@@ -43,13 +44,13 @@ const PropertySearch = (props) => {
           <Icon>
             <FontAwesomeIcon icon={faSlidersH} />
           </Icon>
-          Filters
+          <IconText>Filters</IconText>
         </FiltersButton>
         <SearchButton type='submit'>
           <Icon>
             <FontAwesomeIcon icon={faSearch} />
           </Icon>
-          Search
+          <IconText>Search</IconText>
         </SearchButton>
       </PropertySearchForm>
     </PropertySearchContainer>

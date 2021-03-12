@@ -14,6 +14,7 @@ import {
   LoginContainer,
   LoginLink,
   UserIcon,
+  LoginText,
 } from './header.styles';
 
 const Header = (props) => {
@@ -37,7 +38,7 @@ const Header = (props) => {
           <UserIcon>
             <FontAwesomeIcon icon={faUser} size='sm' />
           </UserIcon>
-          Login
+          <LoginText>Login</LoginText>
         </LoginLink>
       </LoginContainer>
     </HeaderContainer>

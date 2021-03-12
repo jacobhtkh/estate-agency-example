@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { GlobalStyle } from './global.styles';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header.component';
 
@@ -11,6 +12,7 @@ const LandingPage = lazy(() =>
 function App() {
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Suspense fallback={<Spinner />}>

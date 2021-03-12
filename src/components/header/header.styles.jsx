@@ -1,5 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+const ResponsiveOptionsAndLogo = css`
+  @media screen and (max-width: 1116px) {
+    font-size: 16px;
+  }
+`;
+
+const HamburgerMenuAppears = css`
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
 
 export const HeaderContainer = styled.div`
   height: 20px;
@@ -21,6 +33,11 @@ export const LogoAndAgencyContainer = styled.div`
 export const LogoLink = styled(Link)`
   height: 25px;
   width: 25px;
+
+  @media screen and (max-width: 1116px) {
+    height: 20px;
+    width: 20px;
+  }
 `;
 
 export const AgencyLink = styled(Link)`
@@ -34,6 +51,12 @@ export const AgencyLink = styled(Link)`
   :visited {
     color: black;
   }
+
+  ${ResponsiveOptionsAndLogo}
+
+  @media screen and (max-width: 1010px) {
+    display: none;
+  }
 `;
 
 export const OptionsContainer = styled.div`
@@ -43,6 +66,8 @@ export const OptionsContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 25px;
+
+  ${HamburgerMenuAppears}
 `;
 
 export const OptionLink = styled(Link)`
@@ -60,6 +85,8 @@ export const OptionLink = styled(Link)`
   :hover {
     color: grey;
   }
+
+  ${ResponsiveOptionsAndLogo}
 `;
 
 export const LoginContainer = styled.div`
@@ -69,6 +96,8 @@ export const LoginContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: 25px;
+
+  ${HamburgerMenuAppears}
 `;
 
 export const LoginLink = styled(Link)`
@@ -96,4 +125,21 @@ export const UserIcon = styled.span`
   margin-right: 5px;
   position: relative;
   bottom: 1px;
+
+  @media screen and (max-width: 1039px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 356px) {
+    display: none;
+  }
+`;
+
+export const LoginText = styled.span`
+  @media screen and (max-width: 1039px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 356px) {
+    font-size: 12px;
+  }
 `;
