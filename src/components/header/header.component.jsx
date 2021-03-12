@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import HamburgerMenuList from '../hamburger-menu-list/hamburger-menu.component';
 
 import { ReactComponent as Logo } from '../../assets/house-icon.svg';
 import {
@@ -15,10 +17,14 @@ import {
   LoginLink,
   UserIcon,
   LoginText,
-  HamburgerMenuContainer,
+  HamburgerMenuIconContainer,
+  HamburgerMenuIcon,
+  HamburgerMenuListContainer,
 } from './header.styles';
 
 const Header = (props) => {
+  const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
+
   return (
     <HeaderContainer>
       <LogoAndAgencyContainer>
@@ -42,9 +48,17 @@ const Header = (props) => {
           <LoginText>Login</LoginText>
         </LoginLink>
       </LoginContainer>
-      <HamburgerMenuContainer>
-        <FontAwesomeIcon icon={faBars} size='lg' />
-      </HamburgerMenuContainer>
+      <HamburgerMenuListContainer isOpen={hamburgerIsOpen}>
+        <HamburgerMenuList isOpen={hamburgerIsOpen} />
+      </HamburgerMenuListContainer>
+      <HamburgerMenuIconContainer>
+        <HamburgerMenuIcon
+          isOpen={hamburgerIsOpen}
+          onClick={() => setHamburgerIsOpen(!hamburgerIsOpen)}
+        >
+          <FontAwesomeIcon icon={faBars} size='lg' />
+        </HamburgerMenuIcon>
+      </HamburgerMenuIconContainer>
     </HeaderContainer>
   );
 };

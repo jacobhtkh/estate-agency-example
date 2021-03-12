@@ -13,6 +13,38 @@ const HamburgerMenuAppears = css`
   }
 `;
 
+const HamburgerHiddenStyles = css`
+  display: none;
+`;
+
+const HamburgerShownStyles = css`
+  display: flex;
+`;
+
+const HamburgerHiddenColorChange = css`
+  color: black;
+`;
+
+const HamburgerShownColorChange = css`
+  color: white;
+`;
+
+const getHamburgerStatusStyles = ({ isOpen }) => {
+  if (!isOpen) {
+    return HamburgerHiddenStyles;
+  }
+
+  return HamburgerShownStyles;
+};
+
+const getHamburgerColorChangeStyles = ({ isOpen }) => {
+  if (!isOpen) {
+    return HamburgerHiddenColorChange;
+  }
+
+  return HamburgerShownColorChange;
+};
+
 export const HeaderContainer = styled.div`
   height: 20px;
   width: 100%;
@@ -144,7 +176,7 @@ export const LoginText = styled.span`
   }
 `;
 
-export const HamburgerMenuContainer = styled.div`
+export const HamburgerMenuIconContainer = styled.div`
   width: 25%;
   height: 100%;
   align-items: center;
@@ -156,4 +188,16 @@ export const HamburgerMenuContainer = styled.div`
   @media screen and (max-width: 800px) {
     display: flex;
   }
+`;
+
+export const HamburgerMenuIcon = styled.span`
+  ${getHamburgerColorChangeStyles}
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+export const HamburgerMenuListContainer = styled.div`
+  ${getHamburgerStatusStyles}
+  height: 100%;
 `;
