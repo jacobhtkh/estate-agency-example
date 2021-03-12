@@ -18,7 +18,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
   position: sticky;
 `;
 
@@ -141,5 +141,19 @@ export const LoginText = styled.span`
   }
   @media screen and (max-width: 356px) {
     font-size: 12px;
+  }
+`;
+
+export const HamburgerMenuContainer = styled.div`
+  width: 25%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2px;
+  padding: 25px;
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
   }
 `;

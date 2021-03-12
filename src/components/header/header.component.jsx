@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import { ReactComponent as Logo } from '../../assets/house-icon.svg';
 import {
@@ -15,6 +15,7 @@ import {
   LoginLink,
   UserIcon,
   LoginText,
+  HamburgerMenuContainer,
 } from './header.styles';
 
 const Header = (props) => {
@@ -41,6 +42,9 @@ const Header = (props) => {
           <LoginText>Login</LoginText>
         </LoginLink>
       </LoginContainer>
+      <HamburgerMenuContainer>
+        <FontAwesomeIcon icon={faBars} size='lg' />
+      </HamburgerMenuContainer>
     </HeaderContainer>
   );
 };
