@@ -83,7 +83,7 @@ export const PropertySearchInput = styled.input`
   padding: 10px;
   border: 1px solid transparent;
   :focus {
-    outline: none;
+    outline: 0;
     background-color: #eeeeee;
   }
   ${ResponsiveSearchInputStyles}
@@ -126,6 +126,7 @@ export const SearchButton = styled.button`
   }
   :focus {
     outline: 0;
+    box-shadow: 0 0 3px #ddd;
   }
   ${ResponsiveSearchInputStyles}
   ${ResponsiveFilterAndSearchStyles}
